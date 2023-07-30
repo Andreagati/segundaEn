@@ -5,8 +5,6 @@ function Producto(id,descripcion, precio,stock){
     this.descripcion=descripcion
     this.precio=precio
     this.stock=stock}
-   
-debugger
 
 const producto1=new Producto(1,"blusa Jana",11000,20)
 const producto2=new Producto(2,"Camisa Lara",12500,5)
@@ -35,8 +33,8 @@ let repetir=confirm ("¿Desea realizar una compra?")
 
                 if(encontrado!=undefined)
                 {
-                   console.log("entre al if")
-                    carrito.push= ({id:encontrado.id,descripcion:encontrado.descripcion,precio:encontrado.precio,stock:encontrado.stock})
+                   
+                    carrito.push (encontrado)
                 
                   
 
@@ -47,23 +45,14 @@ let repetir=confirm ("¿Desea realizar una compra?")
             repetir=confirm ("¿Desea ingresar nuevo articulo?")
 
         }
-        console.table(carrito)
-        console.log(carrito.length)
-      
- /*prenda=prompt("Ingrese que tipo de prenda desea buscar:",).tri().toLowerCase()
-alert(prenda)
-
-        inventario.forEach(function(mercaderia){console.log(mercaderia)})
-        let coincidencia=inventario.filter((producto)=>producto.descripcion.toLowerCase().includes(prenda))
+       
         
-       console.table(coincidencia)
-
-       const doble = inventario.map((producto)=>producto.id+' '+producto.descripcion+'  '+ producto.precio*0.90);
-
-console.table(doble);
-
-inventario.forEach(function(prenda){prenda.precio*1,21;console.log(prenda.descripcion+' ' +prenda.precio)})
-
-const encontrado=inventario.find((x)=> x.id==5) ;console.log(encontrado)
-const resultado=inventario.filter((x)=> x.precio<10000)
-console.table(resultado)*/
+       console.log("Su carrito de compras tiene los siguientes articulos: ")
+        console.table(carrito)
+        console.log(new Date())
+        console.log("Aprovecha las rebajas de último momento, todo un 15% OFF")
+        const rebaja = inventario.map((producto)=>producto.id+' '+producto.descripcion+'  '+ Math.ceil(producto.precio*0.85));
+        console.table(rebaja)
+      
+        
+      
