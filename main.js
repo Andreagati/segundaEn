@@ -15,11 +15,15 @@ const producto5=new Producto(5,"Camisa Mara",12300,10)
 let inventario =[producto1,producto2,producto3,producto4,producto5]
 inventario.push({id:6,descripcion:"Camisa Anna",precio:8550,stock:5})
 inventario.push({id:7,descripcion:"Camisa Anna",precio:8550,stock:5})
-console.table(inventario)
+let botonBuscar=document.getElementById("btnBuscar")
+
+botonBuscar.addEventListener("click",busqueda)
+function busqueda(){alert("voy a buscar")}
+
 let carrito=[]
 
 
-let repetir=confirm ("¿Desea realizar una compra?") 
+/*let repetir=confirm ("¿Desea realizar una compra?") 
         while(repetir){
              
             if(repetir==false) { 
@@ -45,7 +49,7 @@ let repetir=confirm ("¿Desea realizar una compra?")
             repetir=confirm ("¿Desea ingresar nuevo articulo?")
 
         }
-       
+     
         
        console.log("Su carrito de compras tiene los siguientes articulos: ")
         console.table(carrito)
@@ -54,5 +58,5 @@ let repetir=confirm ("¿Desea realizar una compra?")
         const rebaja = inventario.map((producto)=>producto.id+' '+producto.descripcion+'  '+ Math.ceil(producto.precio*0.85));
         console.table(rebaja)
       
-        
+          */
       
